@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh_Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="CSS counter计数器(content目录序号自动递增)详解一、挖坟不可耻CSS计数器不是什么新鲜玩意了，早在10年春暖花开的时候，我写的“CSS content内容生成技术以及应用”一文就要提到（见下图），不过当时是作为其中一员介绍。就像例行的溜新同事一样，虽然黑如焦炭的我在自我介绍的时候给新同事留下了深刻印象，但由于介绍的同事茫茫多，我只是其中一员。很自然，个把月之后，我就会被无情的淡忘">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS(counter)计数器(content目录序号自动递增)详解">
+<meta property="og:url" content="http://47.94.111.56:61112/前端/CSS-counter-计数器详解/index.html">
+<meta property="og:site_name" content="xxh&#39;s house">
+<meta property="og:description" content="CSS counter计数器(content目录序号自动递增)详解一、挖坟不可耻CSS计数器不是什么新鲜玩意了，早在10年春暖花开的时候，我写的“CSS content内容生成技术以及应用”一文就要提到（见下图），不过当时是作为其中一员介绍。就像例行的溜新同事一样，虽然黑如焦炭的我在自我介绍的时候给新同事留下了深刻印象，但由于介绍的同事茫茫多，我只是其中一员。很自然，个把月之后，我就会被无情的淡忘">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-24_160842.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-24_162331.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/wajinkuann.jpg">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/pa.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_154944.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_155311.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_145152.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_182835.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_202003.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_233459.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_151352.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_234835.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_102609.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_105632.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_111516.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_145749.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_150441.png">
+<meta property="og:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_153731.png">
+<meta property="og:updated_time" content="2019-01-06T12:39:34.666Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS(counter)计数器(content目录序号自动递增)详解">
+<meta name="twitter:description" content="CSS counter计数器(content目录序号自动递增)详解一、挖坟不可耻CSS计数器不是什么新鲜玩意了，早在10年春暖花开的时候，我写的“CSS content内容生成技术以及应用”一文就要提到（见下图），不过当时是作为其中一员介绍。就像例行的溜新同事一样，虽然黑如焦炭的我在自我介绍的时候给新同事留下了深刻印象，但由于介绍的同事茫茫多，我只是其中一员。很自然，个把月之后，我就会被无情的淡忘">
+<meta name="twitter:image" content="https://image.zhangxinxu.com/image/blog/201408/2014-08-24_160842.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://47.94.111.56:61112/前端/CSS-counter-计数器详解/">
+
+
+
+
+
+  <title>CSS(counter)计数器(content目录序号自动递增)详解 | xxh's house</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxh's house</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://47.94.111.56:61112/前端/CSS-counter-计数器详解/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xxh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/仓鼠2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxh's house">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS(counter)计数器(content目录序号自动递增)详解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-30T16:03:00+08:00">
+                2018-12-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/前端/CSS-counter-计数器详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="前端/CSS-counter-计数器详解/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="CSS-counter计数器-content目录序号自动递增-详解"><a href="#CSS-counter计数器-content目录序号自动递增-详解" class="headerlink" title="CSS counter计数器(content目录序号自动递增)详解"></a>CSS counter计数器(content目录序号自动递增)详解</h2><h3 id="一、挖坟不可耻"><a href="#一、挖坟不可耻" class="headerlink" title="一、挖坟不可耻"></a>一、挖坟不可耻</h3><p>CSS计数器不是什么新鲜玩意了，早在10年春暖花开的时候，我写的“<a href="http://www.zhangxinxu.com/wordpress/?p=739" target="_blank" rel="noopener">CSS content内容生成技术以及应用</a>”一文就要提到（见下图），不过当时是作为其中一员介绍。就像例行的溜新同事一样，虽然黑如焦炭的我在自我介绍的时候给新同事留下了深刻印象，但由于介绍的同事茫茫多，我只是其中一员。很自然，个把月之后，我就会被无情的淡忘，除了那依稀的面庞，因为毕竟长得还算比较抽象。</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-24_160842.png" alt="计数器之前介绍截图"></p>
+<p>然而，CSS计数器的斗量显然不是短短几句介绍能够显露的，所谓人不可貌相。就像我，说不定某年某月，当年像驴子一样被溜的新同事终于脑袋被门夹了，想起了我的音容笑貌，找我来寻求帮助呢！</p>
+<p>我最近就遇到这样的情况。</p>
+<p>给部门同事做点果汁系统的时候，由于果汁店经常会有水果因果品爆发被N多靓妹相中而缺货，因此，每人可以选择三种自由搭配的饮品。于是，就有了第1选择、第2选择、第3选择……</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-24_162331.png" alt="三大选择截图"></p>
+<p>本来我是纯文字写在标签里的。好重好累，感觉不会再爱了！此时，突然眼前一道白光，午休时间结束，阿姨把办公室的灯打开了。这恍如隔世的念闪让我突然想起了当年大明湖畔的“CSS计数器”。想当年，移动web还是草莽，IE六七兴风作浪。这诱人的技能就算昭告于世也是受制于兼容大环境而腰斩的命。</p>
+<p>但是现在不一样了，我们赶上了一个更好的时代：英语老师从事传统工业生产锤子，影视明星舍身取义集体赴监狱拍摄大片；以前那些受制于IE6/IE7不兼容而不见天日的高级CSS/JS特性也纷纷走到了台前，CSS计数器就是其中一员。于是，我拿起我平时钓鱼挖蚯蚓的小锹去挖CSS计数器的坟。虽然目前网上已有一些介绍CSS计数器的文章，但大多不够全面，案例不够精彩，查阅也不方便。就像是租的房子，虽然也能挡风遮雨，但装修风格不是自己的，还寄人篱下，保不准房东借个东风就把我吹走了。所以啊，有必要自己留一手，去挖个坟然后建个房。</p>
+<p>对于纯洁的技术圈而言，挖坟并不可耻。我们重新去挖掘过去的那些文章知识，好像一个考古学家去挖掘尘封的历史、消失的文明一般，是件很有价值的事情。所以，如果大家对挖掘考古感兴趣，就跟我一起去挖挖挖~~</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/wajinkuann.jpg" alt="挖金矿"></p>
+<h3 id="二、CSS计数器三角关系挖挖挖"><a href="#二、CSS计数器三角关系挖挖挖" class="headerlink" title="二、CSS计数器三角关系挖挖挖"></a>二、CSS计数器三角关系挖挖挖</h3><p>CSS计数器只能跟<code>content</code>属性在一起的时候才有作用，而<code>content</code>属性貌似专门用在<code>before</code>/<code>after</code>伪元素上的。于是，就有了，“计数器↔伪元素↔content属性”的铁三角关系。</p>
+<h3 id="三、CSS计数器成员挖挖挖"><a href="#三、CSS计数器成员挖挖挖" class="headerlink" title="三、CSS计数器成员挖挖挖"></a>三、CSS计数器成员挖挖挖</h3><p>CSS计数就跟我们军训报数一样的！现在，让我们的静静地闭上眼睛，让思绪飞到青葱的大学，那个炎热的夏日，那个宽广的军训场地，你…想到了什么？——“隔壁班的那个妹子长得好水灵好可爱我好喜欢”。囧，还有呢？——“露着大腿的漂亮师姐从面前悠然走过，留下一阵芬芳，掳走我的心房”。……</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/pa.png" alt="啪 打脸"></p>
+<p>成心找抽啊！就算色心满满，脑袋插满刀子，也应该想到，帅气的教官有木有！共苦的基友有木有！嘹亮的口号有木有！犀利的报数有木有！</p>
+<p>说到报数，是否想起了教官的嘹亮口号：“生信4班，立正，稍息，开始1,2,3,4报数！”</p>
+<p>其中有这么几个关键点：<br><strong>1. 班级命名</strong>。总不能六脉神剑一指，你，侬，汝来称呼吧~有个称呼，如生信4班，就知道谁的是谁了。<br><strong>2. 报数规则</strong>。1,2,3,4递增报数，还是1,2,1,2报数，让班级的人知道。<br><strong>3. 开始报数</strong>。不发口令，大眼瞪小眼，会乱了秩序。</p>
+<p>巧的是，以上3个关键点正好对应CSS计数器的2个属性和1个方法，依次是：<br><strong>1. counter-reset</strong><br><strong>2. counter-increment</strong><br><strong>3. counter()/counters()</strong></p>
+<p>依次说来。<br><strong>1. counter-reset</strong><br>顾名思意，就是“计数器-重置”的意思。其实就是“班级命名”，主要作用就是给计数器起个名字。如果可能，顺便告诉下从哪个数字开始计数。默认是<code>0</code>, 注意，默认是<code>0</code>而不是<code>1</code>. 可能有同学回疑惑，尼玛网上的各种例子默认显示的第1个数字不都是<code>1</code>吗？那是因为受了<code>counter-increment</code>普照的影响，后面会详细讲解。</p>
+<p>OK, 这里，我们先看两个简单的<code>counter-reset</code>的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.xxx &#123; counter-reset: small-apple; &#125; /* 计数器名称是&apos;small-apple&apos; */</span><br><span class="line">.xxx &#123; counter-reset: small-apple 2; &#125; /* 计数器名称是&apos;small-apple&apos;, 并且默认起始值是2 */</span><br></pre></td></tr></table></figure>
+<p>闻名不如见面，您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-from-2.html" target="_blank" rel="noopener">counter-reset值为2简单demo</a></p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_154944.png" alt="counter-reset的起始值"></p>
+<p><code>counter-reset</code>的计数重置可以是负数，例如<code>-2</code>。也可以写成小数，例如<code>2.99</code>，不过就是IE和FireFox都不识别，认为是不合法数值，直接无视，当作默认值<code>0</code>来处理；不过Chrome不嫌贫嫉富，任何小数都是向下取整，如<code>2.99</code>当成<code>2</code>处理，于是王小二还是那个王小二。</p>
+<p>到此为止？非也非也！<code>counter-reset</code>还有一手，就是多个计数器同时命名。例如，王小二和王小三同时登台：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.xxx &#123; counter-reset: wangxiaoer 2 wangxiaosan 3; &#125;</span><br></pre></td></tr></table></figure>
+<p>直接空格分隔，譬如逗号什么的都不行。</p>
+<p>闻名不如见面，您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-both-2-3.html" target="_blank" rel="noopener">两个技术名称并存demo</a></p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_155311.png" alt="王小二和王小三"></p>
+<p>另外，<code>counter-reset</code>还可以设置为<code>none</code>和<code>inherit</code>. 干掉重置以及继承重置。你懂的，就不展开了。</p>
+<p><strong>2. counter-increment</strong><br>顾名思意，就是“计数器-递增”的意思。值为<code>counter-reset</code>的1个或多个关键字。后面可以跟随数字，表示每次计数的变化值。如果缺省，则使用默认变化值<code>1</code>（方便起见，下面的都使用默认值做说明）。</p>
+<p>CSS的计数器的计数是有一套规则的，我将之形象地称为“普照规则”。具体来讲就是：<strong>普照源(counter-reset)唯一，每普照(counter-increment)1次，普照源增加1次计数值。</strong></p>
+<p>于是，我们可以解释上面提到的“默认值是<code>0</code>”的问题。通常CSS计数器应用的时候，我们都会使用<code>counter-increment</code>, 肯定要用这个，否则怎么递增呢！而且一般都是<code>1</code>次普照，正好<code>+1</code>，第一个计数的值就是<code>1</code>啦(0+1=1)！</p>
+<p>下面，通过几个例子，给大家形象地展示下<strong>普照规则</strong>。</p>
+<p><strong>①</strong> 您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-increment-from-2.html" target="_blank" rel="noopener">王小二counter-increment普照成王小三demo</a></p>
+<p>demo中，王小二的<code>counter-reset</code>值是<code>wangxiaoer 2</code>，但是，显示的计数不是小<code>2</code>而是小<code>3</code>，王小二变成了王小三！</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_145152.png" alt="计数起始值为counter-reset值+1"></p>
+<p>Demo相关核心代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.counter &#123; counter-reset: wangxiaoer 2; counter-increment: wangxiaoer; &#125;</span><br><span class="line">.counter:before &#123; content: counter(wangxiaoer); &#125;</span><br><span class="line">&lt;p class=&quot;counter&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>这里<code>counter-increment</code>普照了<code>p</code>标签，<code>counter-reset</code>值增加，默认递增<code>1</code>，于是计数从设置的初始值<code>2</code>变成了<code>3</code>，<code>wangxiaoer</code>就是这里的计数器，自然伪元素content值<code>counter(wangxiaoer)</code>就是<code>3</code>.</p>
+<p><strong>②</strong> 当然，也可以普照自身，也就是<code>counter-increment</code>直接设置在伪元素上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.counter &#123; counter-reset: wangxiaoer 2; &#125;</span><br><span class="line">.counter:before &#123; content: counter(wangxiaoer); counter-increment: wangxiaoer; &#125;</span><br><span class="line">&lt;p class=&quot;counter&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>依然是1次普照，依旧全局的计数器<code>+1</code>，所以，显示的数值还是<code>3</code>(demo略).</p>
+<p><strong>③</strong> 趁热打铁。如果父元素和子元素都被<code>counter-increment</code>普照1遍，结果会如何呢？</p>
+<p>很简单的，父元素1次普照，子元素1次普照，共两次普照，<code>counter-reset</code>设置的计数器值增加2次，计数起始值是2，于是现实的数字就是<code>4</code>啦！</p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-increment-twice.html" target="_blank" rel="noopener">counter-increment父子连续普照demo</a></p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_182835.png" alt="连续普照数值直接增加"></p>
+<p>Demo相关核心代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.counter &#123; counter-reset: wangxiaoer 2; counter-increment: wangxiaoer; &#125;</span><br><span class="line">.counter:before &#123; content: counter(wangxiaoer); counter-increment: wangxiaoer; &#125;</span><br><span class="line">&lt;p class=&quot;counter&quot;&gt;&lt;/p&gt;    // 显示的是4</span><br></pre></td></tr></table></figure>
+<p>总而言之，无论位置在何方，只要有<code>counter-increment</code>，对应的计数器的值就会变化，<code>counter()</code>只是输出而已！</p>
+<p><strong>④</strong> 理解了“普照规则”，则以我们通常的计数器递增效果也可以理解了。</p>
+<p>考虑下面这两个问题：</p>
+<ol>
+<li>爸爸受到普照，且重置默认值<code>0</code>，爸爸有2个孩子。孩子自身都没有普照。两个孩子的计数值是？</li>
+<li>爸爸没有普照，重置默认值<code>0</code>，爸爸有2个孩子。孩子自身都接受普照。两个孩子的计数值是？</li>
+</ol>
+<p>答案是：<strong>1,1和1,2</strong>!</p>
+<p>哦？答案居然不一样，有什么差别呢？</p>
+<p>很简单。什么爸爸，孩子你都不要关心。只要看被普照了几次。情况1就爸爸被普照，因此，计数器增加1次，此时两个孩子的<code>counter</code>自然都是<code>1</code>; 情况2，两个孩子被普照，普照2次，第1个孩子普照之时，计数器+1，也就是1；第2个孩子普照之时再+1，于是就是2. 于是，两个孩子的<code>counter</code>输出就是<code>1,2</code>.</p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-increment-before-after.html" target="_blank" rel="noopener">兄弟递增规则演示demo</a></p>
+<p>上demo对应上面的第2个问题，其结果截图如下：</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_202003.png" alt="兄弟递增规则demo截图"></p>
+<p>核心代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.counter &#123; counter-reset: wangxiaoer 2; &#125;</span><br><span class="line">.counter:before,</span><br><span class="line">.counter:after &#123; content: counter(wangxiaoer); counter-increment: wangxiaoer; &#125;</span><br><span class="line">&lt;p class=&quot;counter&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>计数器的数值变化遵循HTML渲染顺序，遇到一个<code>increment</code>计数器就变化，什么时候<code>counter</code>输出就输出此时的计数值。看懂了下图，您自然就会全然明白“普照规则”了。</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_233459.png" alt="计数器深入理解"></p>
+<p>如果上图看不明白，您可以狠狠地<a href="http://www.zhangxinxu.com/study/201408/css-counters.html" target="_blank" rel="noopener">点击这里</a>查看HTML与CSS源代码，感受下<code>increment</code>即递增的“普照规则”。</p>
+<p><strong>counter-increment其他设定</strong><br><strong>①</strong> <code>counter-reset</code>可以一次命名两个计数器名称，<code>counter-increment</code>自然有与之呼应的设定，也是名称留空就可以了。</p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-increment-both-2-3.html" target="_blank" rel="noopener">counter-increment多名称同时应用demo</a></p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_151352.png" alt="2个counter-reset值同时"></p>
+<p><strong>②</strong> 正如本节开始提到的，这变化的值不一定是<code>1</code>，我们可以灵活设置。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">counter-increment: counter 2</span><br></pre></td></tr></table></figure>
+<p>那就是偶数偶数的增加。例如下面这个变身:</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-25_234835.png" alt="递增值大小变化变身"></p>
+<p>还可以是负数，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">counter-increment: counter -1</span><br></pre></td></tr></table></figure>
+<p>就有了递减排序效果啦！</p>
+<p><strong>③</strong> 值还可以是<code>none</code>或者<code>inherit</code>.</p>
+<p><strong>3. counter()/counters()</strong><br>这是个方法，不是属性。类似CSS3中才<code>calc()</code>计算。这里作用很单纯显示计数。不过名称、用法有多个：<br><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_102609.png" alt="counter/counters语法"></p>
+<p><strong>①</strong> 目前为止，我们看到的是最简单的用法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">counter(name) /* name就是counter-reset的名称 */</span><br></pre></td></tr></table></figure>
+<p><strong>②</strong> 那下面这个语法是什么意思呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">counter(name, style)</span><br></pre></td></tr></table></figure>
+<p>这里的<code>style</code>参数还有有些名堂的。其支持的关键字值就是<code>list-style-type</code>支持的那些值。作用是，我们递增递减可以不一定是数字，还可以是英文字母，或者罗马文等。</p>
+<blockquote>
+<p><strong>list-style-type</strong>：disc | circle | square | decimal | lower-roman | upper-roman | lower-alpha | upper-alpha | none | armenian | cjk-ideographic | georgian | lower-greek | hebrew | hiragana | hiragana-iroha | katakana | katakana-iroha | lower-latin | upper-latin</p>
+</blockquote>
+<p>闻名不如见面。您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-reset-counter-style.html" target="_blank" rel="noopener">CSS计数器counter()方法style参数demo</a></p>
+<p>结果见下截图：<br><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_105632.png" alt="counter style属性截图"></p>
+<p>核心CSS代码为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">content: counter(wangxiaoer, lower-roman); /* 以小写罗马数字格式表示当前计数器wangxiaoer的值 */</span><br></pre></td></tr></table></figure>
+<p><strong>③</strong> counter还支持级联。也就是一个<code>content</code>属性值可以有多个<code>counter()</code>方法。</p>
+<p>闻名不如见面。您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counter-both-exist.html" target="_blank" rel="noopener">多个counter级联并存demo</a></p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_111516.png" alt="counter级联并存demo截图"></p>
+<p>核心CSS/HTML如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.counter &#123; counter-reset: wangxiaoer 2 wangxiaosan 3; &#125;</span><br><span class="line">.counter:before &#123; content: counter(wangxiaoer) &apos;\A&apos; counter(wangxiaosan); white-space: pre; &#125;</span><br><span class="line">&lt;p class=&quot;counter&quot;&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>上面CSS源代码使用<code>&#39;\A&#39;</code>使用<code>inline</code>水平元素换行，此技术若有兴趣，可参考之前的“<a href="http://www.zhangxinxu.com/wordpress/2012/03/tip-css-multiline-display/" target="_blank" rel="noopener">使用CSS(Unicode字符)让inline水平元素换行</a>”一文。</p>
+<p><strong>④</strong> 下面介绍下<code>counters()</code>方法。看似值多了个字母<code>s</code>, 但表意大变身。<code>counters</code>几乎可以说是<strong>嵌套计数</strong>的代名词。</p>
+<p>我们平时的序号，不可能就只是<code>1,2,3,4,..</code>, 还会有诸如 <code>1.1,1.2,1.3,...</code>等的子序号。得，前者就是<code>counter()</code>干的事情，后者就是<code>counters()</code>干的事情。</p>
+<p>基本用法为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">counters(name, string); /* MDN上说，要想IE8兼容，这里逗号后面的空格要去掉，但是鄙人IE11的IE8模式看，无此问题 */</span><br></pre></td></tr></table></figure>
+<p>其中，<code>string</code>参数为字符串（需要引号包围的）（必须参数），表示子序号的连接字符串。例如<code>1.1</code>的<code>string</code>就是<code>&#39;.&#39;</code>, <code>1-1</code>就是<code>&#39;-&#39;</code>.</p>
+<p>看上去很简单。但是，如果理解不是很深刻，日后在使用肯定会遇到麻烦——“咦？怎么没有子序列，明明语法正确的啊？”首先，记住这一句话，“普照源是唯一的”，所以，如果你在<strong>只在</strong><code>body</code>标签上设置<code>counter-reset</code>，就算里面的子元素嵌套了祖宗十八代，还是不会有任何嵌套序号出现的！所以，要想实现嵌套，必须让每一个列表容器拥有一个“普照源”，通过子辈对父辈的<code>counter-reset</code>重置、配合<code>counters()</code>方法才能实现计数嵌套效果。</p>
+<p>闻名不如见面。您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counters-string.html" target="_blank" rel="noopener">CSS计数器内嵌demo</a></p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_145749.png" alt="计数器嵌套"></p>
+<p>也会遇到这样的麻烦——“咦，怎么子序列不按层级顺序来啊，命名语法正确啊？” 还是要记住这一句话：“一个容器里的普照源(reset)是唯一的”，所以，如果你不小心把计数显示和技术reset元素以兄弟元素形式放在一起（虽然HTML内容布局呈现是没有异常的），就很可能会出现计数序号乱入的情况。</p>
+<p>闻名不如见面。您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201408/css-counters-string-break.html" target="_blank" rel="noopener">CSS计数器counters列表被reset乱入demo</a></p>
+<p>会看到标红的部分的序号显示异常了！</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_150441.png" alt="计数器的值乱入的截图示意"></p>
+<p>为何会出现这个问题，我们看下HTML（主要是注释）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;reset&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;counter&quot;&gt;我是王小二&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;reset&quot;&gt;&lt;-- 这里的reset与上面的counter是兄弟关系，而不是父子关系。虽然布局渲染上没有差异。但是，一个容器的reset的唯一的，一旦子元素出现reset，会改变整个容器的嵌套关系，于是，后面的“王小三”、“王小四”其实已经进入了2级嵌套，因此显示的是1-3和1-4 --&gt;</span><br><span class="line">        ...</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;counter&quot;&gt;我是王小三&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;counter&quot;&gt;我是王小四&lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;reset&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;counter&quot;&gt;我是王小四的大儿子&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>如果上面的注释没看明白，您可以跟前面没有问题的demo做下HTML结构对比，或许就会豁然开朗！</p>
+<p><strong>⑤</strong> <code>counters()</code>也是支持<code>style</code>自定义递增形式的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">counters(name, string, style)</span><br></pre></td></tr></table></figure>
+<p>与<code>counter()</code>的<code>style</code>参数使用一致，不赘述。</p>
+<h3 id="四、CSS计数器与display-none挖挖挖"><a href="#四、CSS计数器与display-none挖挖挖" class="headerlink" title="四、CSS计数器与display:none挖挖挖"></a>四、CSS计数器与display:none挖挖挖</h3><p>一个元素，如果设置了<code>counter-increment</code>, 但是其<code>display</code>的属性值是<code>none</code>或者含有<code>hidden</code>属性（针对支持浏览器），则此计数值是不会增加的。而<code>visibility:hidden</code>以及其他声明不会有此现象。</p>
+<h3 id="五、CSS计数器实际应用挖挖挖"><a href="#五、CSS计数器实际应用挖挖挖" class="headerlink" title="五、CSS计数器实际应用挖挖挖"></a>五、CSS计数器实际应用挖挖挖</h3><p>相比传统的<code>ol</code>,<code>ul</code>列表计数，CSS计数器的优势就在于灵活与强大，不足就是IE6/IE7不支持。</p>
+<p>普照规则第一条，普照源唯一。所以，我们可以在头尾放两个差距甚远的列表，然后，这些列表自动显示序号。而<code>ol/ul</code>只能写死<code>start</code>实现，很不灵活，一旦列表有删减，就嗝屁了。</p>
+<p>由于计数器是伪元素控制显示的。因此，我们几乎可以应用各种CSS样式，各种定位等。所以，基本上，只要有有序序号呈现的地方，就能使用CSS计数器。</p>
+<p>例如，电商首页的图片slide广告上的<code>1,2,3,4,...</code>序号；</p>
+<p><img src="https://image.zhangxinxu.com/image/blog/201408/2014-08-26_153731.png" alt="首页广告位的序号"></p>
+<p>我们做分享时候使用的HTML5 web在线幻灯片就可以使用CSS计数器标注页数等；以及一开始给小伙伴们做的果汁工具的3个选择等。</p>
+<p>我下笔之初本想搞几个高保真的例子的，写到这里发现，内容已经很多了。一篇技术文章，如果读了2分钟，发现才读了一半，后面的内容就会闪电过，然后会有些莫名的评论之类。因此，文章不易过长。所以，这里就要收尾了！</p>
+<h3 id="六、最后的挖掘总结"><a href="#六、最后的挖掘总结" class="headerlink" title="六、最后的挖掘总结"></a>六、最后的挖掘总结</h3><p>CSS计数器的斗量果然很深啊。如果不静心思考，会陷入很多想当然的误区。如果不全面学习，也无法感受到CSS计数器的强大潜力所在。就我自己而言，着实挖到大宝贝了。不知在座的诸位的挖掘成果如何呢？</p>
+<p>行文匆忙，疏漏难免，若有错误，欢迎指正；欢迎沟通欢迎交流，更欢迎在仔细阅读本文后对一些技术观点发起挑战！</p>
+<p><strong>参考文章</strong></p>
+<ul>
+<li><a href="http://dev.opera.com/articles/automatic-numbering-with-css-counters/" target="_blank" rel="noopener">Automatic Numbering With CSS Counters</a></li>
+<li><a href="http://www.w3.org/TR/CSS2/generate.html#scope" target="_blank" rel="noopener">http://www.w3.org/TR/CSS2/generate.html#scope</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-reset" target="_blank" rel="noopener">counter-reset</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/counter-increment" target="_blank" rel="noopener">counter-increment</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Counters" target="_blank" rel="noopener">Using CSS counters</a></li>
+</ul>
+<p><a href="https://www.zhangxinxu.com/wordpress/2014/08/css-counters-automatic-number-content/" target="_blank" rel="noopener">转载自张鑫旭的博客</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/杂文集/Untitled/" rel="next" title="你的孤独，虽败犹荣——读书笔记">
+                <i class="fa fa-chevron-left"></i> 你的孤独，虽败犹荣——读书笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/uncategorized/test-psd/" rel="prev" title="test_psd">
+                test_psd <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://EXAMPLE.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/仓鼠2.jpg" alt="xxh">
+            
+              <p class="site-author-name" itemprop="name">xxh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+		<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-counter计数器-content目录序号自动递增-详解"><span class="nav-number">1.</span> <span class="nav-text">CSS counter计数器(content目录序号自动递增)详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、挖坟不可耻"><span class="nav-number">1.1.</span> <span class="nav-text">一、挖坟不可耻</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、CSS计数器三角关系挖挖挖"><span class="nav-number">1.2.</span> <span class="nav-text">二、CSS计数器三角关系挖挖挖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、CSS计数器成员挖挖挖"><span class="nav-number">1.3.</span> <span class="nav-text">三、CSS计数器成员挖挖挖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、CSS计数器与display-none挖挖挖"><span class="nav-number">1.4.</span> <span class="nav-text">四、CSS计数器与display:none挖挖挖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、CSS计数器实际应用挖挖挖"><span class="nav-number">1.5.</span> <span class="nav-text">五、CSS计数器实际应用挖挖挖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六、最后的挖掘总结"><span class="nav-number">1.6.</span> <span class="nav-text">六、最后的挖掘总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxh</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://github.com/xxh422735676">默研</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://darkmoons.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://47.94.111.56:61112/前端/CSS-counter-计数器详解/';
+          this.page.identifier = '前端/CSS-counter-计数器详解/';
+          this.page.title = 'CSS(counter)计数器(content目录序号自动递增)详解';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://darkmoons.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":125,"height":250},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click.js"></script>
+<!-- calendar widget -->
+
+
+

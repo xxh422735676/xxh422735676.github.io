@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh_Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CTF工具,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="转载至公众号 “黑客之道” 黑客技术一度被认为是一个神秘的特有领域，在向世界前行的黑客大军中如果装备不行，就无法发挥真正的实力，好的工具可以让工作事半功倍，今天华盟君给大家推荐一些在2018年中优秀的黑客工具，这些工具都很出名，可以百度一波！  话不多数！先来一波！ NO.1     GodOfHacker  NO.2     [嗅探神器] Intercepter  NO.3     局域网查看工">
+<meta name="keywords" content="CTF工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2018黑客工具">
+<meta property="og:url" content="http://47.94.111.56:61112/CTF/2018黑客工具/index.html">
+<meta property="og:site_name" content="xxh&#39;s house">
+<meta property="og:description" content="转载至公众号 “黑客之道” 黑客技术一度被认为是一个神秘的特有领域，在向世界前行的黑客大军中如果装备不行，就无法发挥真正的实力，好的工具可以让工作事半功倍，今天华盟君给大家推荐一些在2018年中优秀的黑客工具，这些工具都很出名，可以百度一波！  话不多数！先来一波！ NO.1     GodOfHacker  NO.2     [嗅探神器] Intercepter  NO.3     局域网查看工">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNNY8whqHIUPUpd9x6U3ugv9KSyxTNsavuTlpIHWrXa7dLiaOkaJ9f6Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZectkvlyYNkB7z0u2VnZYJygQYNvhcT5P19VTWEPRqeWdu8YmegwdE1Pg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeczchl82qCIgEwRH3cdTyJ3iclhxXuLKfib7SbsicVIOf4n8NRHRtU9xUYg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecukyYrcdvkBabv9tqRSksmqS2MeX6USGLpdAN5DDlZwsm8qnAsuu30A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeceUlNkN06qe9ePcBOSeGY2YQn0ics65trffawUo7JU0I5vmBK2phe4Qw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecxst3a9lliap7fW0jNeMXVDb61HQticpsZhZUUCdkXpImcOJcia1ZRAcqw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecutEqVsvwgWpcuC0Hh9F6tnOOUYRWiaD8AV1iaShcSREmQSxK5PohloicQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec0GemDxUibEEic6DhwsMU3ic151g0nsmVoxHzib0tw4ibmy21R6sB6H91p2w/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec9kaC2GTeaTcpuMbXzvRgbXicH9uvkCYnLh5bREnicxeEZBPGVIReblvA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6CXJzIIjicfDHq9qeo5V8icKLIaoIUkt48icdR5qEAAzGaRfsW1h09RJpw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6CVW8abc8t6liclbU1nmOd8mNabwUwBqdCoPibpLYvj1BWHibmyOdq9jiaw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6TENJVWic0p8hD6HOKCKjl4ibIZBufItV5lL2XEyXGEWHbRBD1dZHuicEA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia69Cge5nwrYKU2owT1jR0CUz5JTdRWcfjfc8s0XNznZ7fLgngWvfqESg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6Bp5ialVFXIkQnf1useiaGJiaYlUg51NlDwAXBXptZeFspvuOiahND7X7Tg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6PticqW4G9CFPCQv5by8FHCxCNmoZFtIQGUUx7iazsicF8lQ5bibL721HCA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6nIfdKn1jgqKtfqM1sJ1jPWm5u9tzffiaLgibVoUich6zjIAatd28Wvfiaw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6U1dc3lPV4H0kppVBU9BzLLFQEP6TDlLdOib1nWbsHB2w3Qjp2htroRA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6AuExh5Sx2aZ185o6qTN0Shz34lK2YQPkLdAFS0JQdKrS2o2EGicQMZw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia67WAaqAtLFVPfIeGia692cufaB4Bdw2RGic4oKbelQXoVP6qgbs1ZOUww/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6Bs65mpmCo7afjRm9NNyxxp5sFUNuVUP2iafZWGkcStgdVUxGCbabZPA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6qjR05JYQWxA9uFTqfJC3SrCE9WWia23w37vRibPbdswibDW22dATovEpQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6ibiaLKRykdYeSFvamoHIyP4UHtOuJZI8FHDyRLGibneIcicWceZibzpWYIw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6a5eO4WdBviaicaYG6NbiarrE37YX6vPClz0vqTiczmJdjA8coYFZZiaUHuw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6wINzia0sFDNRPb60ibwASvpNHsVmUSJSia0TW8bbpYZgHZ7lXPs8NibKwg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6WskHgMuI2xajWLbeicN2Q4j87r54gFpAOCOk4AwmHCdFXIfxJOMvY7Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6ibP3sVh9C96OeIFpTHKa8DKJyyWaDicqZNe49cTkbX9Zs3bZYVc7g2Og/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeckSSDqHlXzcDacBqev11OO6nhpTMY9cIK2zUtA2MerNs0551Jc8W7eA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecSrv6x3VEALc0uzEYbu11MnicA8eNERvv2BrISG5AAohjJmRKXuQG5gA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecEE7xgscs8hiajKwCXUa9rWoHOZgibL2yP2rn0ja82DjtpoPhoDeRZJFA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecrZB65mAYJII1o80cwrqtVslia3I1ibyn7aHAw0fKgmdACPibBMTSGvUew/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecXgAo7dLW7TSpwiawYFtKxP8Cm90ibsOZseFv5zb9C3hXOWShzRXl2Iww/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecw6nlJqs49giagvNpG9QqRSOkCLp1GKOLBpuufO8B4ibDPdtVjagAy8Cw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec00vKuNyJUGWXeUHlMyU6TF3IdaFicT73uNjytP0xQARNLibs9nO29meA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecGTgEumHxa0IK88JFExKVHBEBAQ6hWyktfvian9mwhwqfumy4ic43rbqQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecXlm5ZRl2HHMvK6ThgibrBCa8yZAEzmN533ibjxCibcygBkgIGqjvrrKFQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeccnk1y476NDnxnttibHT1MXzibsvSia6QqHfT1coE625m4zWUQlTibP3xNQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecnLbm8bruojrZ0BdX7zdxOicAZchiaTYY0KQyhycSRhibibTNGw9FjH0VBw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecVz9FlkhKdvmaPHMBQhPM4oQSTaoZibhMejLh5uVrKyicQiaQyHXwSt0AQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecZt4SQhb1Z0IXYUiaFI3hMlEh29qHdfFiagH8KZ3wg1PYlUEZBnLE6DYQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecy52465BxCOMzpQOfNuRgRqxkZibrPln4D7TLQJr7ng8UvXjiaPGlywtg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec4SibKU6pA8UW6jv9ATLx9BN1qic2rakpUjZ9RyTXImTouCnkIVYPPpgA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeciamx3icMnDDM6NUicsprAq9JqNibEKu4MAeX9bjNicbQF5gpMQxEMqiam2nw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecByEYxSHljRjhXmhzNoffIt0g5mpBwBtj6150JC4q6TrurBxzaxYalQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecxHXCHdxe54lWld3OZ3Q6keb1WVplqN43AqGp2XES1o4c4fbts0YhkA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeculcfMrWcoI4rDXGqvWeI57QeRxUorNibteloVUaN8QziaswNaCuoaz7g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecPBnY85CnPPbZJ5C3r1JLuOVG2mPxP5mBCcW6zMwRUUMmLhZX4gZ8Ig/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecVC1jqttIfWvAlklJmrFPYWKTkX2oVvyussD1QLAc4eicCVNrawmFG3A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec5USvMDVoj0q8gqdGpwMJ54EKdfbTa5HdAQRNm7BPQl4L9fhGCFaNrQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNKOVQtlooXuhJ8zIWtlHvzvvNiccIaTgHYjJJPaiaZyKLy4oOQ8Wp7qQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec36NEojgw6ENyEt1mjJLlqXWmdj568thV9FHRGEPzribHIRDMNX1Gk7w/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecEibjr5jBBicicH7lZ0qnucYicUGZicDpUbWrAF8TjeX079ibCndc6qoSnrbA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecnsmiar5w5Bo3qUK2jwn0Wh1wDTsKQGQA5B5eCXpWMib9Lk8XDMXcq3Zg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNnZhmIiaUUDszztg0tB1T4miagE9nMExDhkOgicSiaMXIia7GzV2iaegJN5Q/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNVp6slSm1wuic5SnAI69ibBLDicOxIdfmRaKzx3AjLBibE4RAQlgf4uDicg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeccUoSpdVn450ZE7xyBXDsKW1f1ib0syIl6icPAsS9QAo1d3XTBXkE2waw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:updated_time" content="2019-02-04T14:45:58.176Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2018黑客工具">
+<meta name="twitter:description" content="转载至公众号 “黑客之道” 黑客技术一度被认为是一个神秘的特有领域，在向世界前行的黑客大军中如果装备不行，就无法发挥真正的实力，好的工具可以让工作事半功倍，今天华盟君给大家推荐一些在2018年中优秀的黑客工具，这些工具都很出名，可以百度一波！  话不多数！先来一波！ NO.1     GodOfHacker  NO.2     [嗅探神器] Intercepter  NO.3     局域网查看工">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://47.94.111.56:61112/CTF/2018黑客工具/">
+
+
+
+
+
+  <title>2018黑客工具 | xxh's house</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxh's house</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://47.94.111.56:61112/CTF/2018黑客工具/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xxh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/仓鼠2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxh's house">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">2018黑客工具</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-04T22:43:00+08:00">
+                2019-02-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index">
+                    <span itemprop="name">CTF</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/CTF/2018黑客工具/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="CTF/2018黑客工具/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>转载至公众号 “黑客之道”</p>
+<p>黑客技术一度被认为是一个神秘的特有领域，在向世界前行的黑客大军中如果装备不行，就无法发挥真正的实力，好的工具可以让工作事半功倍，今天华盟君给大家推荐一些在2018年中优秀的黑客工具，这些工具都很出名，可以百度一波！</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="img"></p>
+<p><strong>话不多数！先来一波！</strong></p>
+<p><strong>NO.1     GodOfHacker</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNNY8whqHIUPUpd9x6U3ugv9KSyxTNsavuTlpIHWrXa7dLiaOkaJ9f6Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.2     [嗅探神器] Intercepter</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZectkvlyYNkB7z0u2VnZYJygQYNvhcT5P19VTWEPRqeWdu8YmegwdE1Pg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.3     局域网查看工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeczchl82qCIgEwRH3cdTyJ3iclhxXuLKfib7SbsicVIOf4n8NRHRtU9xUYg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.4     EvilFoca</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecukyYrcdvkBabv9tqRSksmqS2MeX6USGLpdAN5DDlZwsm8qnAsuu30A/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.5     NetFuke</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeceUlNkN06qe9ePcBOSeGY2YQn0ics65trffawUo7JU0I5vmBK2phe4Qw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.6     LeGend Rat</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecxst3a9lliap7fW0jNeMXVDb61HQticpsZhZUUCdkXpImcOJcia1ZRAcqw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.7     NjRAT</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecutEqVsvwgWpcuC0Hh9F6tnOOUYRWiaD8AV1iaShcSREmQSxK5PohloicQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.8     Pker多线程后台极速扫描工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec0GemDxUibEEic6DhwsMU3ic151g0nsmVoxHzib0tw4ibmy21R6sB6H91p2w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.9     Wscan6</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec9kaC2GTeaTcpuMbXzvRgbXicH9uvkCYnLh5bREnicxeEZBPGVIReblvA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.10     Mimikatz</strong></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>NO.11 EagleEye-追踪目标</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6CXJzIIjicfDHq9qeo5V8icKLIaoIUkt48icdR5qEAAzGaRfsW1h09RJpw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.12 Hijacker v1.5</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6CVW8abc8t6liclbU1nmOd8mNabwUwBqdCoPibpLYvj1BWHibmyOdq9jiaw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.13 LOIC 1.0.8 (Low Orbit Ion Cannon)</strong> </p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6TENJVWic0p8hD6HOKCKjl4ibIZBufItV5lL2XEyXGEWHbRBD1dZHuicEA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.14 Trape-开源智能工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia69Cge5nwrYKU2owT1jR0CUz5JTdRWcfjfc8s0XNznZ7fLgngWvfqESg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.15 BlackEye-功能齐全的网络钓鱼工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6Bp5ialVFXIkQnf1useiaGJiaYlUg51NlDwAXBXptZeFspvuOiahND7X7Tg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.16 Mercury-一种用来收集信息</strong></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>NO.17 VOOKI-Web应用程序漏洞扫描程序</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6PticqW4G9CFPCQv5by8FHCxCNmoZFtIQGUUx7iazsicF8lQ5bibL721HCA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.18 Devploit v3.6-信息收集工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6nIfdKn1jgqKtfqM1sJ1jPWm5u9tzffiaLgibVoUich6zjIAatd28Wvfiaw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.19 -功能齐全的Twitter智能分析开源工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6U1dc3lPV4H0kppVBU9BzLLFQEP6TDlLdOib1nWbsHB2w3Qjp2htroRA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.20 -Android智能手机渗透测试平台</strong></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>NO.21 -一种蛮力攻击框架</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6AuExh5Sx2aZ185o6qTN0Shz34lK2YQPkLdAFS0JQdKrS2o2EGicQMZw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.22 -信息收集工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia67WAaqAtLFVPfIeGia692cufaB4Bdw2RGic4oKbelQXoVP6qgbs1ZOUww/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.23 -渗透测试框架</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6Bs65mpmCo7afjRm9NNyxxp5sFUNuVUP2iafZWGkcStgdVUxGCbabZPA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.24 -用于渗透测试的Linux发行版</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6qjR05JYQWxA9uFTqfJC3SrCE9WWia23w37vRibPbdswibDW22dATovEpQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.25 -自动Wireless攻击工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6ibiaLKRykdYeSFvamoHIyP4UHtOuJZI8FHDyRLGibneIcicWceZibzpWYIw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.26 - 一种自动化的Pentest工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6a5eO4WdBviaicaYG6NbiarrE37YX6vPClz0vqTiczmJdjA8coYFZZiaUHuw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.27 -类似Nmap</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6wINzia0sFDNRPb60ibwASvpNHsVmUSJSia0TW8bbpYZgHZ7lXPs8NibKwg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.28 -检测网站CMS、网站扫描和自动漏洞利用</strong></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>NO.29 -爬虫工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6WskHgMuI2xajWLbeicN2Q4j87r54gFpAOCOk4AwmHCdFXIfxJOMvY7Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>NO.30 -网络钓鱼工具</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL88xG4MW9j7rgPX0micuZwia6ibP3sVh9C96OeIFpTHKa8DKJyyWaDicqZNe49cTkbX9Zs3bZYVc7g2Og/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><strong>接下来我们将分成三个部分！</strong></p>
+<p><strong>Windows最佳黑客工具！</strong></p>
+<p><strong>Linux最佳黑客工具！</strong></p>
+<p><strong>手机最佳黑客工具！</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="img"></p>
+<p><strong>Windows最佳黑客工具</strong></p>
+<p><strong>NO.1     ARPwner</strong>      </p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeckSSDqHlXzcDacBqev11OO6nhpTMY9cIK2zUtA2MerNs0551Jc8W7eA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>ARPwner是一个python工具，允许您执行  ARP中毒和DNS中毒攻击。它有一个干净简单的GUI和一个插件系统来过滤收集的信息，还有一个SSLstrip的实现。它由Nicolas Trippar在BlackHat USA 2012上发布。</p>
+<p><strong>NO.2     METASPLOIT</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecSrv6x3VEALc0uzEYbu11MnicA8eNERvv2BrISG5AAohjJmRKXuQG5gA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Metasploit是一款开源的安全漏洞检测工具，可以帮助安全和IT专业人士识别安全性问题，验证漏洞的缓解措施，并管理专家驱动的安全性进行评估，提供真正的安全风险情报。该工具主要面向的是Linux操作系统，但也有Windows和Mac版本。</p>
+<p><strong>NO.3     BSQLinjector</strong></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>BSQLinjector是一个用ruby编写的盲SQL注入开发工具。它使用盲注入方法从SQL数据库中检索数据。我建议使用“—test”开关，以便在将配置的有效负载发送到应用程序之前清楚地查看其外观。</p>
+<p><strong>NO.4     Detekt</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecEE7xgscs8hiajKwCXUa9rWoHOZgibL2yP2rn0ja82DjtpoPhoDeRZJFA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Detekt是一个免费的工具，可以检测复杂的监控程序，比如FinFisher a.k.a.FinSpy和Ha.Team RCS。这个工具不能保证检测到所有的间谍软件，所以不要认为这是反病毒/反间谍软件的替代品。</p>
+<p><strong>NO.5     WIRESHARK</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecrZB65mAYJII1o80cwrqtVslia3I1ibyn7aHAw0fKgmdACPibBMTSGvUew/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Wireshark(前称Ethereal)是一个网络封包分析软件。网络封包分析软件的功能是撷取网络封包，并尽可能显示出最为详细的网络封包资料。Wireshark适用于Linux和Windows操作系统。</p>
+<p><strong>NO.6     AirCrack</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecXgAo7dLW7TSpwiawYFtKxP8Cm90ibsOZseFv5zb9C3hXOWShzRXl2Iww/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Aircrack是一套用于破解WEP和WPA的工具套装，一般用于无线网络的密钥破解，从而非法进入未经许可的无线网络。该工具功能强大，在世界范围内使用最为广泛。</p>
+<p><strong>NO.7     Cain and Abel</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecw6nlJqs49giagvNpG9QqRSOkCLp1GKOLBpuufO8B4ibDPdtVjagAy8Cw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Cain &amp; Abel 是由Oxid.it开发的一个针对Microsoft操作系统的免费口令恢复工具。号称穷人使用的L0phtcrack。它的功能十分强大，可以网络嗅探，网络欺骗，破解加密口令、解码被打乱的口令、显示口令框、显示缓存口令和分析路由协议，甚至还可以监听内网中他人使用VOIP拨打电话。</p>
+<p><strong>NO.8     Fern WiFi Cracker</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec00vKuNyJUGWXeUHlMyU6TF3IdaFicT73uNjytP0xQARNLibs9nO29meA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Fern Wifi Cracker是一种无线安全审计和攻击软件编写的程序，使用Python编程语言和Python的Qt图形界面库，该程序是能够破解和恢复WEP / WPA / WPS键和无线或以太网上运行其他基于网络的攻击基于网络的，对于WEP破解，它使用分段，Chop-Chop，Caffe-Latte，Hirte，ARP请求重播或WPS攻击。</p>
+<p><strong>NO.9     Infernal-Twin</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecGTgEumHxa0IK88JFExKVHBEBAQ6hWyktfvian9mwhwqfumy4ic43rbqQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>​    Infernal-Twin是一个自动化的渗透测试工具，开发目的是通过自动化的Evil Twin攻击来评估无线的安全性。</p>
+<p><strong>NO.10     Reaver</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecXlm5ZRl2HHMvK6ThgibrBCa8yZAEzmN533ibjxCibcygBkgIGqjvrrKFQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Reaver：掠夺者，免费的开源WiFi密码查找软件，可以破解大部分当前路由器的密码。Reaver通过对WPS PIN的暴力攻击来获取WPA / WPA2密码，它可以在4-10小时内获得明文密码，不过一般在实际操作中会快的多。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>Linux最佳黑客工具</strong></p>
+<p><strong>NO.1     Social-Engineer Toolkit</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeccnk1y476NDnxnttibHT1MXzibsvSia6QqHfT1coE625m4zWUQlTibP3xNQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Social-Engineer Toolkit（社会工程师工具包）是一款基于Python的社交工程渗透测试高级框架。它提供了制作多种类型社会工程攻击的组件，如凭据获取、鱼叉式网络钓鱼攻击、短信欺骗、网络钓鱼电子邮件等等。目前，Social-Engineer Toolkit仅适用于Linux系统。</p>
+<p><strong>NO.2     Hashcat</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecnLbm8bruojrZ0BdX7zdxOicAZchiaTYY0KQyhycSRhibibTNGw9FjH0VBw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Hashcat是一个高级密码破解程序，支持五种独特的攻击模式：Straight，Combination，Brute-force，Hybrid dictionary mask和Hybrid mask dictionary。</p>
+<p>它目前支持Linux，Windows和OSX上的CPU，GPU和其他硬件加速器，并且具有帮助实现分布式密码破解的功能。</p>
+<p><strong>NO.3     Lynis</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecVz9FlkhKdvmaPHMBQhPM4oQSTaoZibhMejLh5uVrKyicQiaQyHXwSt0AQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Lynis是一种轻量级的开源安全审计工具。系统管理员，安全专业人员和审计员使用它来评估其基于Linux和UNIX的系统的安全防御。它在主机上运行，??因此它执行比漏洞扫描程序更广泛的安全扫描。</p>
+<p><strong>NO.4     Nmap</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecZt4SQhb1Z0IXYUiaFI3hMlEh29qHdfFiagH8KZ3wg1PYlUEZBnLE6DYQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Nmap是一个网络连接端扫描软件，用来扫描网上电脑开放的网络连接端。确定哪些服务运行在哪些连接端，并且推断计算机运行哪个操作系统(这是亦称 fingerprinting)。它是网络管理员必用的软件之一，以及用以评估网络系统安全。Nmap适用于Linux、Windows和Mac。</p>
+<p><strong>NO.5     Burp Suite</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecy52465BxCOMzpQOfNuRgRqxkZibrPln4D7TLQJr7ng8UvXjiaPGlywtg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Burp Suite 是用于攻击web 应用程序的集成平台，包含了许多工具。Burp Suite为这些工具设计了许多接口，以加快攻击应用程序的过程。所有工具都共享一个请求，并能处理对应的HTTP 消息、持久性、认证、代理、日志、警报。</p>
+<p><strong>NO.6     Netcat</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec4SibKU6pA8UW6jv9ATLx9BN1qic2rakpUjZ9RyTXImTouCnkIVYPPpgA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Netcat是一个简单而通用的Unix实用工具，它使用TCP或UDP协议在网络连接之间读取和写入数据。它被设计成一个可靠的“后端”工具，可以被其他程序和脚本直接或容易地使用。同时，它是一个功能丰富的网络调试和探索工具，因为它可以创建几乎任何类型的连接，您将需要，并有几个有趣的内置功能。</p>
+<p><strong>NO.7     Dsniff</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeciamx3icMnDDM6NUicsprAq9JqNibEKu4MAeX9bjNicbQF5gpMQxEMqiam2nw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Dsniff足一个高级的口令嗅探器，Dug Song写的Dsniff的工具是第一批扩展了传统的Sniffer概念的监听工具。Dsniff将制造的数据包注入到网络，并将通信数据重新定句到攻击者的机器。</p>
+<p><strong>NO.8     OclHashcat</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecByEYxSHljRjhXmhzNoffIt0g5mpBwBtj6150JC4q6TrurBxzaxYalQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>oclHashcat自称是世界上第一个也是唯一一个基于GPGPU的引擎的世界上最快的密码破解工具。为了使用该工具，NVIDIA用户需要ForceWare 346.59或更高版本，AMD用户需要Catalyst 15.7或更高版本。</p>
+<p><strong>NO.9     THC Hydra</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecxHXCHdxe54lWld3OZ3Q6keb1WVplqN43AqGp2XES1o4c4fbts0YhkA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>THC Hydra是一个非常受欢迎的密码破解工具，并且有一个非常活跃和经验丰富的开发团队在维护，支持Windows，Linux，Free BSD，Solaris和OS X等操作系统。THC Hydra是一个快速稳定的网络登录攻击工具，它将使用字典或暴力攻击来尝试针对登录页面的各种密码和登录组合。</p>
+<p><strong>NO.10    NESSUS</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeculcfMrWcoI4rDXGqvWeI57QeRxUorNibteloVUaN8QziaswNaCuoaz7g/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Nessus 是目前全世界最多人使用的系统漏洞扫描与分析软件。总共有超过75,000个机构使用Nessus 作为扫描该机构电脑系统的软件。 CERT 与 SANS 等著名的网络安全相关机构皆认同此工具软件的功能与可用性。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/3xxicXNlTXLicrSkz33wlN0KeEriancsL84cDqhoN0xuG7czmqQOmoYWwStI7L10AfWkPyjEnCKXLyyOpaqQ7DcOw/640?wx_fmt=gif&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="img"></p>
+<p><strong>手机最佳黑客工具</strong></p>
+<p><strong>NO.1    Hash Decrypt</strong>   </p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecPBnY85CnPPbZJ5C3r1JLuOVG2mPxP5mBCcW6zMwRUUMmLhZX4gZ8Ig/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Hash Decrypt是一个Android应用程序，可以让你破解/解密哈希。这个应用程序使用字典攻击来破解哈希。它支持10种不同的散列函数，如MD2，MD4，MD5，SHA1，SHA-256，SHA-384，SHA-512，Tiger，RIPEMD-128和RIPEMD-160。</p>
+<p><strong>NO.2    Hackode</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecVC1jqttIfWvAlklJmrFPYWKTkX2oVvyussD1QLAc4eicCVNrawmFG3A/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Hackode是一款由Ravi Kumar为渗透测试人员，道德黑客，IT管理员和网络安全专业人士开发的Android应用程序。您可以使用此应用收集有关目标的信息并查找易受攻击的网站。这个应用程序是一个安全意识的Android用户的武器库的一个伟大的补充。</p>
+<p><strong>NO.3    Fing</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec5USvMDVoj0q8gqdGpwMJ54EKdfbTa5HdAQRNm7BPQl4L9fhGCFaNrQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Fing是一个用于网络分析的简单android工具。它可以帮助您，发现连接到WiFi网络的设备，从移动设备/平板电脑打开设备，执行traceroute和一些网络操作。</p>
+<p><strong>NO.4    Shark For Root</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNKOVQtlooXuhJ8zIWtlHvzvvNiccIaTgHYjJJPaiaZyKLy4oOQ8Wp7qQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Shark For Root是安全专家和黑客的诈骗版Android版本。它基本上是一个交通嗅探器，适用于WiFi，3G和FroYo系留模式。该应用程序基于tcpdump，因此您可以在此Android版本上使用tcpdump命令。</p>
+<p><strong>NO.5    Android</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZec36NEojgw6ENyEt1mjJLlqXWmdj568thV9FHRGEPzribHIRDMNX1Gk7w/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>网络欺骗是一个android应用程序，允许您拦截和修改WiFi网络流量。这是一个简单的工具，可以用来执行多个欺骗，如改变文本，自定义图像变化，自定义重定向，中间人等。</p>
+<p><strong>NO.6    DroidSheep</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecEibjr5jBBicicH7lZ0qnucYicUGZicDpUbWrAF8TjeX079ibCndc6qoSnrbA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>DroidSheep是由Andreas Koch开发的 用于无线网络安全分析的安卓工具。它基本上是一个会话劫持工具，允许黑客通过无线网络捕获会话cookie。这意味着您可以嗅探并捕获位于同一网络上的人员的Web会话配置文件。 </p>
+<p><strong>NO.7    DroidSheep</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecnsmiar5w5Bo3qUK2jwn0Wh1wDTsKQGQA5B5eCXpWMib9Lk8XDMXcq3Zg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>Nipper是一款用于检查CMS（内容管理系统）网站安全性的Android应用程序。它是一个简单的扫描仪，有超过15个不同的模块来收集有关特定URL的信息。</p>
+<p><strong>NO.8    ZANTI</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNnZhmIiaUUDszztg0tB1T4miagE9nMExDhkOgicSiaMXIia7GzV2iaegJN5Q/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>ZANTI是由Zimperium Mobile Security为网络安全专业人员开发的渗透测试工具包。基本上，它允许您模拟网络上的恶意攻击。在zANTI的帮助下，您将能够执行各种类型的操作，如MITM攻击，MAC地址欺骗，扫描，密码审计，漏洞检查等等。简而言之，这个android工具包是黑客的完美伴侣。</p>
+<p><strong>NO.9    AnDOSid</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZecNVp6slSm1wuic5SnAI69ibBLDicOxIdfmRaKzx3AjLBibE4RAQlgf4uDicg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>AnDOSid是由Scott Herbert开发的一款安卓工具，可用于从手机发起DoS攻击，AnDOSid非常强大，您甚至可以使用它来关闭Web服务器。但是不要去做，因为这是进入监狱的快捷方式之一！</p>
+<p><strong>NO.10    WiFi Kill Pro</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/3xxicXNlTXL9lsgvnEdHxRiathiaQe2RZeccUoSpdVn450ZE7xyBXDsKW1f1ib0syIl6icPAsS9QAo1d3XTBXkE2waw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>WiFi Kill Pro是一款android工具，你可以用它来禁用同一WiFi网络上设备的互联网连接。它是一个具有简单用户界面的轻量级工具。也就是说，任何人都可以在没有任何用户指南的情况下使用这个应用程序。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CTF工具/" rel="tag"># CTF工具</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/前端/HTML-CSS入门学习/" rel="next" title="HTML+CSS入门学习">
+                <i class="fa fa-chevron-left"></i> HTML+CSS入门学习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/CTF/Fiddler大解析！抱歉，抓包抓得好真的可以为所欲为。/" rel="prev" title="Fiddler大解析！抱歉，抓包抓得好真的可以为所欲为。">
+                Fiddler大解析！抱歉，抓包抓得好真的可以为所欲为。 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://EXAMPLE.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/仓鼠2.jpg" alt="xxh">
+            
+              <p class="site-author-name" itemprop="name">xxh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+		<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxh</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://github.com/xxh422735676">默研</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://darkmoons.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://47.94.111.56:61112/CTF/2018黑客工具/';
+          this.page.identifier = 'CTF/2018黑客工具/';
+          this.page.title = '2018黑客工具';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://darkmoons.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":125,"height":250},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click.js"></script>
+<!-- calendar widget -->
+
+
+

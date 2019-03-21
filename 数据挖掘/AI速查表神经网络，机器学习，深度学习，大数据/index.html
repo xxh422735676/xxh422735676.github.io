@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh_Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] 引言作者：Stefan Kojouharov 编译：ronghuaiyang 原文链接：https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463 过去的几个月中，我都在收集AI速查表。我时不时的分享给同学和朋友，他们经">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI速查表神经网络，机器学习，深度学习，大数据">
+<meta property="og:url" content="http://47.94.111.56:61112/数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/index.html">
+<meta property="og:site_name" content="xxh&#39;s house">
+<meta property="og:description" content="[TOC] 引言作者：Stefan Kojouharov 编译：ronghuaiyang 原文链接：https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463 过去的几个月中，我都在收集AI速查表。我时不时的分享给同学和朋友，他们经">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-f828ced4ea5bed04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-fcd5d3a3dc8eea0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-5336d6b1307b4e9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-4c2ea3c5d2c265f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/650/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-7322426d0d2aa147.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-7c360d41e96a852a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-81a60ee3127a0a79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/780/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-eddefcb5219f3e70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-d0f56308b4a3c0fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-c02af1cef353c98e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-4cbbe3d01652671d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-82e2ee33586d2f5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-c9a96d11951d43fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-a5c26f3dffc110fe.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-0dff93ce70dceffe.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-73357743eb5fc498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/14463515-0b867f94d2c0db47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+<meta property="og:updated_time" content="2019-02-25T12:40:58.861Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI速查表神经网络，机器学习，深度学习，大数据">
+<meta name="twitter:description" content="[TOC] 引言作者：Stefan Kojouharov 编译：ronghuaiyang 原文链接：https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463 过去的几个月中，我都在收集AI速查表。我时不时的分享给同学和朋友，他们经">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/14463515-f828ced4ea5bed04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://47.94.111.56:61112/数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/">
+
+
+
+
+
+  <title>AI速查表神经网络，机器学习，深度学习，大数据 | xxh's house</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxh's house</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://47.94.111.56:61112/数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xxh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/仓鼠2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxh's house">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">AI速查表神经网络，机器学习，深度学习，大数据</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-25T20:35:00+08:00">
+                2019-02-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据挖掘/" itemprop="url" rel="index">
+                    <span itemprop="name">数据挖掘</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>作者：Stefan Kojouharov<br> 编译：ronghuaiyang<br> 原文链接：<a href="https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463" target="_blank" rel="noopener">https://becominghuman.ai/cheat-sheets-for-ai-neural-networks-machine-learning-deep-learning-big-data-678c51b4b463</a></p>
+<p>过去的几个月中，我都在收集AI速查表。我时不时的分享给同学和朋友，他们经常问我要。所以我决定整理一下，发出来。为了让这件事情更加有趣，我对每个主题加了点描述。</p>
+<p>这个应该是史上最全的了，希望你喜欢…</p>
+<h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p><img src="https:////upload-images.jianshu.io/upload_images/14463515-f828ced4ea5bed04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="神经网络图"><a href="#神经网络图" class="headerlink" title="神经网络图"></a>神经网络图</h2><p><img src="https:////upload-images.jianshu.io/upload_images/14463515-fcd5d3a3dc8eea0a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800/format/webp" alt="img"></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-5336d6b1307b4e9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600/format/webp" alt="img"></p>
+<h2 id="机器学习概述"><a href="#机器学习概述" class="headerlink" title="机器学习概述"></a>机器学习概述</h2><p><img src="https:////upload-images.jianshu.io/upload_images/14463515-4c2ea3c5d2c265f1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/650/format/webp" alt="img"></p>
+<h2 id="机器学习-Scikit-learn算法"><a href="#机器学习-Scikit-learn算法" class="headerlink" title="机器学习: Scikit-learn算法"></a>机器学习: Scikit-learn算法</h2><p>这个速查表可以帮助你为你的任务找到合适的estimator，这个是工作中最困难的地方。流向图帮助你查找文档，estimator也能大致的帮助你更加好的理解你的问题，以及如何解决问题。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-7322426d0d2aa147.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="Scikit-Learn"><a href="#Scikit-Learn" class="headerlink" title="Scikit-Learn"></a>Scikit-Learn</h2><p><strong>Scikit-learn</strong> 是一个开源的机器学习Python库。功能包括分类，回归，聚类，算法包括支持向量机，随机森林，梯度提升，k均值和密度聚类算法。而且和Python的数值处理库如Numpy和SciPy能够互通。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-7c360d41e96a852a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="机器学习-算法速查表"><a href="#机器学习-算法速查表" class="headerlink" title="机器学习 : 算法速查表"></a>机器学习 : 算法速查表</h2><blockquote>
+<p>这是一个来自Microsoft Azure的机器学习速查表，你可以为你的预测任务选取合适的机器学习的算法。首选，速查表会问你数据的形式，然后给你一个适合你的任务的最佳的算法建议。</p>
+</blockquote>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-81a60ee3127a0a79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/780/format/webp" alt="img"></p>
+<h2 id="用Python做数据科学"><a href="#用Python做数据科学" class="headerlink" title="用Python做数据科学"></a>用Python做数据科学</h2><p><img src="https:////upload-images.jianshu.io/upload_images/14463515-eddefcb5219f3e70.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800/format/webp" alt="img"></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-d0f56308b4a3c0fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h2><p>在2017年的5月，Google发布了第二代的TPU，第二代的TPU有高达180 teraflops的性能，64个TPU的集群可以提供11.5 petaflops的计算能力。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-c02af1cef353c98e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="Keras"><a href="#Keras" class="headerlink" title="Keras"></a>Keras</h2><p>在2017年，Google的TensorFlow决定在其核心库中支持Keras。Keras是一套接口，而不是一个机器学习的框架。它提供一套高级的，更加直接的抽象功能，使得配置一个神经网络更加的容易，而不用管背后是哪个计算库。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-4cbbe3d01652671d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h2><p>Numpy是一个没有优化过的解释器，目的是用Python来实现CPython中的东西。使用这个版本的数学计算往往比较慢。Numpy提供了多维数组的计算和操作，非常的有效，当需要重用代码时，大部分的内部的循环都是使用Numpy。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-82e2ee33586d2f5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2><p>这个名字是来自于 “<a href="https://en.wikipedia.org/wiki/Panel_data" target="_blank" rel="noopener">panel data</a>”，是一个经济学的词语，用来处理多维度的结构化的数据。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-c9a96d11951d43fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>数据整理 data wrangler</p>
+<p>“data wrangler”这个词开始于流行文化的渗透。在2017年的电影 Kong: Skull Island，其中一个角色，被介绍为“Steve Woodward, our data wrangler”。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-a5c26f3dffc110fe.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-0dff93ce70dceffe.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="Scipy"><a href="#Scipy" class="headerlink" title="Scipy"></a>Scipy</h2><p>Scipy是基于Numpy的数组的对象构建的，是Numpy的一部分，包括的工具如 <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank" rel="noopener">Matplotlib</a>, <a href="https://en.wikipedia.org/wiki/Pandas_%28software%29" target="_blank" rel="noopener">pandas</a> and <a href="https://en.wikipedia.org/wiki/SymPy" target="_blank" rel="noopener">SymPy</a>，还有一个科学计算的扩展库。Numpy和其他的一些科学计算工具如 <a href="https://en.wikipedia.org/wiki/MATLAB" target="_blank" rel="noopener">MATLAB</a>, <a href="https://en.wikipedia.org/wiki/GNU_Octave" target="_blank" rel="noopener">GNU Octave</a>, and <a href="https://en.wikipedia.org/wiki/Scilab" target="_blank" rel="noopener">Scilab</a>很像。Numpy的技术栈也有时候叫做SciPy 技术栈。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-73357743eb5fc498.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<p>Matplotlib</p>
+<p>matplotlib是一个基于Python的绘图库，是Numpy的一个扩展。提供了面向对象的API。</p>
+<p>pyplot是一个matplotlib的模块，提供了类似Matlab的绘图接口，可以像Matlab一样简单易用，而且免费。</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/14463515-0b867f94d2c0db47.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></p>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p>数据科学速查表: <a href="https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics" target="_blank" rel="noopener">https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics</a></p>
+<p>数据整理速查表: <a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf" target="_blank" rel="noopener">https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf</a></p>
+<p>数据整理: <a href="https://en.wikipedia.org/wiki/Data_wrangling" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Data_wrangling</a></p>
+<p>Keras速查表: <a href="https://www.datacamp.com/community/blog/keras-cheat-sheet#gs.DRKeNMs" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/keras-cheat-sheet#gs.DRKeNMs</a></p>
+<p>Keras: <a href="https://en.wikipedia.org/wiki/Keras" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Keras</a></p>
+<p>机器学习速查表: <a href="https://ai.icymi.email/new-machinelearning-cheat-sheet-by-emily-barry-abdsc/" target="_blank" rel="noopener">https://ai.icymi.email/new-machinelearning-cheat-sheet-by-emily-barry-abdsc/</a></p>
+<p>机器学习速查表: <a href="https://docs.microsoft.com/en-in/azure/machine-learning/machine-learning-algorithm-cheat-sheet" target="_blank" rel="noopener">https://docs.microsoft.com/en-in/azure/machine-learning/machine-learning-algorithm-cheat-sheet</a></p>
+<p>机器学习速查表: <a href="http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html" target="_blank" rel="noopener">http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html</a></p>
+<p>Matplotlib速查表: <a href="https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet#gs.uEKySpY" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/python-matplotlib-cheat-sheet#gs.uEKySpY</a></p>
+<p>Matpotlib: <a href="https://en.wikipedia.org/wiki/Matplotlib" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Matplotlib</a></p>
+<p>神经网络速查表: <a href="http://www.asimovinstitute.org/neural-network-zoo/" target="_blank" rel="noopener">http://www.asimovinstitute.org/neural-network-zoo/</a></p>
+<p>神经网络图速查表: <a href="http://www.asimovinstitute.org/blog/" target="_blank" rel="noopener">http://www.asimovinstitute.org/blog/</a></p>
+<p>神经网络: <a href="https://www.quora.com/Where-can-find-a-cheat-sheet-for-neural-network" target="_blank" rel="noopener">https://www.quora.com/Where-can-find-a-cheat-sheet-for-neural-network</a></p>
+<p>Numpy速查表: <a href="https://www.datacamp.com/community/blog/python-numpy-cheat-sheet#gs.AK5ZBgE" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/python-numpy-cheat-sheet#gs.AK5ZBgE</a></p>
+<p>NumPy: <a href="https://en.wikipedia.org/wiki/NumPy" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/NumPy</a></p>
+<p>Pandas速查表: <a href="https://www.datacamp.com/community/blog/python-pandas-cheat-sheet#gs.oundfxM" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/python-pandas-cheat-sheet#gs.oundfxM</a></p>
+<p>Pandas: <a href="https://en.wikipedia.org/wiki/Pandas_%28software%29" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Pandas_(software)</a></p>
+<p>Pandas速查表: <a href="https://www.datacamp.com/community/blog/pandas-cheat-sheet-python#gs.HPFoRIc" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/pandas-cheat-sheet-python#gs.HPFoRIc</a></p>
+<p>Scikit速查表: <a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet</a></p>
+<p>Scikit-learn: <a href="https://en.wikipedia.org/wiki/Scikit-learn" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Scikit-learn</a></p>
+<p>Scikit-learn速查表: <a href="http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html" target="_blank" rel="noopener">http://peekaboo-vision.blogspot.com/2013/01/machine-learning-cheat-sheet-for-scikit.html</a></p>
+<p>Scipy速查表: <a href="https://www.datacamp.com/community/blog/python-scipy-cheat-sheet#gs.JDSg3OI" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/python-scipy-cheat-sheet#gs.JDSg3OI</a></p>
+<p>SciPy: <a href="https://en.wikipedia.org/wiki/SciPy" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/SciPy</a></p>
+<p>TesorFlow速查表: <a href="https://www.altoros.com/tensorflow-cheat-sheet.html" target="_blank" rel="noopener">https://www.altoros.com/tensorflow-cheat-sheet.html</a></p>
+<p>本文可以任意转载，转载时请注明作者及原文地址。</p>
+<p>作者：ronghuaiyang</p>
+<p>链接：<a href="https://www.jianshu.com/p/31aac5ec6a54" target="_blank" rel="noopener">https://www.jianshu.com/p/31aac5ec6a54</a></p>
+<p>來源：简书</p>
+<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Python/5个快速而简单的数据可视化方法和Python代码/" rel="next" title="5个快速而简单的数据可视化方法和Python代码">
+                <i class="fa fa-chevron-left"></i> 5个快速而简单的数据可视化方法和Python代码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/杂文集/“阿法狗”之父：关于围棋，人类3000年来犯了一个错/" rel="prev" title="“阿法狗”之父：关于围棋，人类3000年来犯了一个错">
+                “阿法狗”之父：关于围棋，人类3000年来犯了一个错 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://EXAMPLE.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/仓鼠2.jpg" alt="xxh">
+            
+              <p class="site-author-name" itemprop="name">xxh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+		<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络"><span class="nav-number">1.1.</span> <span class="nav-text">神经网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#神经网络图"><span class="nav-number">1.2.</span> <span class="nav-text">神经网络图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习概述"><span class="nav-number">1.3.</span> <span class="nav-text">机器学习概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习-Scikit-learn算法"><span class="nav-number">1.4.</span> <span class="nav-text">机器学习: Scikit-learn算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scikit-Learn"><span class="nav-number">1.5.</span> <span class="nav-text">Scikit-Learn</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习-算法速查表"><span class="nav-number">1.6.</span> <span class="nav-text">机器学习 : 算法速查表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用Python做数据科学"><span class="nav-number">1.7.</span> <span class="nav-text">用Python做数据科学</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TensorFlow"><span class="nav-number">1.8.</span> <span class="nav-text">TensorFlow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Keras"><span class="nav-number">1.9.</span> <span class="nav-text">Keras</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Numpy"><span class="nav-number">1.10.</span> <span class="nav-text">Numpy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pandas"><span class="nav-number">1.11.</span> <span class="nav-text">Pandas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Scipy"><span class="nav-number">1.12.</span> <span class="nav-text">Scipy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源"><span class="nav-number">1.13.</span> <span class="nav-text">资源</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxh</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://github.com/xxh422735676">默研</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://darkmoons.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://47.94.111.56:61112/数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/';
+          this.page.identifier = '数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/';
+          this.page.title = 'AI速查表神经网络，机器学习，深度学习，大数据';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://darkmoons.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":125,"height":250},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click.js"></script>
+<!-- calendar widget -->
+
+
+

@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh_Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="数据可视化,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="5 种使用 Python 代码轻松实现数据可视化的方法数据可视化是数据科学家工作中的重要组成部分。在项目的早期阶段，你通常会进行探索性数据分析（Exploratory Data Analysis，EDA）以获取对数据的一些理解。创建可视化方法确实有助于使事情变得更加清晰易懂，特别是对于大型、高维数据集。在项目结束时，以清晰、简洁和引人注目的方式展现最终结果是非常重要的，因为你的受众往往是非技术型客">
+<meta name="keywords" content="数据可视化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5个快速而简单的数据可视化方法和Python代码">
+<meta property="og:url" content="http://47.94.111.56:61112/Python/5个快速而简单的数据可视化方法和Python代码/index.html">
+<meta property="og:site_name" content="xxh&#39;s house">
+<meta property="og:description" content="5 种使用 Python 代码轻松实现数据可视化的方法数据可视化是数据科学家工作中的重要组成部分。在项目的早期阶段，你通常会进行探索性数据分析（Exploratory Data Analysis，EDA）以获取对数据的一些理解。创建可视化方法确实有助于使事情变得更加清晰易懂，特别是对于大型、高维数据集。在项目结束时，以清晰、简洁和引人注目的方式展现最终结果是非常重要的，因为你的受众往往是非技术型客">
+<meta property="og:locale" content="zh_Hans">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/151545_9IHf_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/151638_sOaW_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/151653_pz3Q_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/214602_nF6l_3512005.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/151918_7kK9_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/210428_rhTc_3512005.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/152056_qcRh_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/152106_K9eG_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/152114_U7g0_2896879.png">
+<meta property="og:image" content="https://static.oschina.net/uploads/space/2018/0313/152155_nJLJ_2896879.png">
+<meta property="og:updated_time" content="2019-02-27T01:31:25.468Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5个快速而简单的数据可视化方法和Python代码">
+<meta name="twitter:description" content="5 种使用 Python 代码轻松实现数据可视化的方法数据可视化是数据科学家工作中的重要组成部分。在项目的早期阶段，你通常会进行探索性数据分析（Exploratory Data Analysis，EDA）以获取对数据的一些理解。创建可视化方法确实有助于使事情变得更加清晰易懂，特别是对于大型、高维数据集。在项目结束时，以清晰、简洁和引人注目的方式展现最终结果是非常重要的，因为你的受众往往是非技术型客">
+<meta name="twitter:image" content="https://static.oschina.net/uploads/space/2018/0313/151545_9IHf_2896879.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://47.94.111.56:61112/Python/5个快速而简单的数据可视化方法和Python代码/">
+
+
+
+
+
+  <title>5个快速而简单的数据可视化方法和Python代码 | xxh's house</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh_Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">xxh's house</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-主页">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-标签">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-分类">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-归档">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://47.94.111.56:61112/Python/5个快速而简单的数据可视化方法和Python代码/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xxh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/仓鼠2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xxh's house">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">5个快速而简单的数据可视化方法和Python代码</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-04T22:51:00+08:00">
+                2019-02-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Python/5个快速而简单的数据可视化方法和Python代码/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="Python/5个快速而简单的数据可视化方法和Python代码/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="5-种使用-Python-代码轻松实现数据可视化的方法"><a href="#5-种使用-Python-代码轻松实现数据可视化的方法" class="headerlink" title="5 种使用 Python 代码轻松实现数据可视化的方法"></a><a href="https://www.oschina.net/translate/5-quick-and-easy-data-visualizations-in-python" target="_blank" rel="noopener">5 种使用 Python 代码轻松实现数据可视化的方法</a></h2><p>数据可视化是数据科学家工作中的重要组成部分。在项目的早期阶段，你通常会进行探索性数据分析（Exploratory Data Analysis，EDA）以获取对数据的一些理解。创建可视化方法确实有助于使事情变得更加清晰易懂，特别是对于大型、高维数据集。在项目结束时，以清晰、简洁和引人注目的方式展现最终结果是非常重要的，因为你的受众往往是非技术型客户，只有这样他们才可以理解。</p>
+<p>Matplotlib 是一个流行的 Python 库，可以用来很简单地创建数据可视化方案。但每次创建新项目时，设置数据、参数、图形和排版都会变得非常繁琐和麻烦。在这篇博文中，我们将着眼于 5 个数据可视化方法，并使用 Python Matplotlib 为他们编写一些快速简单的函数。与此同时，这里有一个很棒的图表，可用于在工作中选择正确的可视化方法！</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/151545_9IHf_2896879.png" alt="img"></p>
+<h3 id="散点图"><a href="#散点图" class="headerlink" title="散点图"></a><strong>散点图</strong></h3><p>散点图非常适合展示两个变量之间的关系，因为你可以直接看到数据的原始分布。 如下面第一张图所示的，你还可以通过对组进行简单地颜色编码来查看不同组数据的关系。想要可视化三个变量之间的关系？ 没问题！ 仅需使用另一个参数（如点大小）就可以对第三个变量进行编码，如下面的第二张图所示。</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/151638_sOaW_2896879.png" alt="img"></p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/151653_pz3Q_2896879.png" alt="img"></p>
+<p>现在开始讨论代码。我们首先用别名 “plt” 导入 Matplotlib 的 pyplot 。要创建一个新的点阵图，我们可调用 plt.subplots() 。我们将 x 轴和 y 轴数据传递给该函数，然后将这些数据传递给 ax.scatter() 以绘制散点图。我们还可以设置点的大小、点颜色和 alpha 透明度。你甚至可以设置 Y 轴为对数刻度。标题和坐标轴上的标签可以专门为该图设置。这是一个易于使用的函数，可用于从头到尾创建散点图！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib.pyplot as pltimport numpy as npdef scatterplot(x_data, y_data, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;, color = &quot;r&quot;, yscale_log=False):</span><br><span class="line"></span><br><span class="line">    # Create the plot object</span><br><span class="line">    _, ax = plt.subplots()    # Plot the data, set the size (s), color and transparency (alpha)</span><br><span class="line">    # of the points</span><br><span class="line">    ax.scatter(x_data, y_data, s = 10, color = color, alpha = 0.75)    if yscale_log == True:</span><br><span class="line">        ax.set_yscale(&apos;log&apos;)    # Label the axes and provide a title</span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br></pre></td></tr></table></figure>
+<h3 id="折线图"><a href="#折线图" class="headerlink" title="折线图"></a><strong>折线图</strong></h3><p>当你可以看到一个变量随着另一个变量明显变化的时候，比如说它们有一个大的协方差，那最好使用折线图。让我们看一下下面这张图。我们可以清晰地看到对于所有的主线随着时间都有大量的变化。使用散点绘制这些将会极其混乱，难以真正明白和看到发生了什么。折线图对于这种情况则非常好，因为它们基本上提供给我们两个变量（百分比和时间）的协方差的快速总结。另外，我们也可以通过彩色编码进行分组。</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/214602_nF6l_3512005.png" alt="img"></p>
+<p>这里是折线图的代码。它和上面的散点图很相似，只是在一些变量上有小的变化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def lineplot(x_data, y_data, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;):</span><br><span class="line">    # Create the plot object</span><br><span class="line">    _, ax = plt.subplots()    # Plot the best fit line, set the linewidth (lw), color and</span><br><span class="line">    # transparency (alpha) of the line</span><br><span class="line">    ax.plot(x_data, y_data, lw = 2, color = &apos;#539caf&apos;, alpha = 1)    # Label the axes and provide a title</span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br></pre></td></tr></table></figure>
+<h3 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a><strong>直方图</strong></h3><p>直方图对于查看（或真正地探索）数据点的分布是很有用的。查看下面我们以频率和 IQ 做的直方图。我们可以清楚地看到朝中间聚集，并且能看到中位数是多少。我们也可以看到它呈正态分布。使用直方图真得能清晰地呈现出各个组的频率之间的相对差别。组的使用（离散化）真正地帮助我们看到了“更加宏观的图形”,然而当我们使用所有没有离散组的数据点时，将对可视化可能造成许多干扰，使得看清真正发生了什么变得困难。</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/151918_7kK9_2896879.png" alt="img"></p>
+<p>下面是在 Matplotlib 中的直方图代码。有两个参数需要注意一下：首先，参数 n_bins 控制我们想要在直方图中有多少个离散的组。更多的组将给我们提供更加完善的信息，但是也许也会引进干扰，使得我们远离全局；另一方面，较少的组给我们一种更多的是“鸟瞰图”和没有更多细节的全局图。其次，参数 cumulative 是一个布尔值，允许我们选择直方图是否为累加的，基本上就是选择是 PDF（Probability Density Function，概率密度函数）还是 CDF（Cumulative Density Function，累积密度函数）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def histogram(data, n_bins, cumulative=False, x_label = &quot;&quot;, y_label = &quot;&quot;, title = &quot;&quot;):</span><br><span class="line">    _, ax = plt.subplots()</span><br><span class="line">    ax.hist(data, n_bins = n_bins, cumulative = cumulative, color = &apos;#539caf&apos;)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_title(title)</span><br></pre></td></tr></table></figure>
+<p>想象一下我们想要比较数据中两个变量的分布。有人可能会想你必须制作两张直方图，并且把它们并排放在一起进行比较。然而，实际上有一种更好的办法：我们可以使用不同的透明度对直方图进行叠加覆盖。看下图，均匀分布的透明度设置为 0.5 ，使得我们可以看到他背后的图形。这样我们就可以直接在同一张图表里看到两个分布。</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/210428_rhTc_3512005.png" alt="img"></p>
+<p>对于重叠的直方图，需要设置一些东西。首先，我们设置可同时容纳不同分布的横轴范围。根据这个范围和期望的组数，我们可以真正地计算出每个组的宽度。最后，我们在同一张图上绘制两个直方图，其中有一个稍微更透明一些。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"># Overlay 2 histograms to compare themdef overlaid_histogram(data1, data2, n_bins = 0, data1_name=&quot;&quot;, data1_color=&quot;#539caf&quot;, data2_name=&quot;&quot;, data2_color=&quot;#7663b0&quot;, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;):</span><br><span class="line">    # Set the bounds for the bins so that the two distributions are fairly compared</span><br><span class="line">    max_nbins = 10</span><br><span class="line">    data_range = [min(min(data1), min(data2)), max(max(data1), max(data2))]</span><br><span class="line">    binwidth = (data_range[1] - data_range[0]) / max_nbins    if n_bins == 0</span><br><span class="line">    	bins = np.arange(data_range[0], data_range[1] + binwidth, binwidth)    else: </span><br><span class="line">    	bins = n_bins    # Create the plot</span><br><span class="line">    _, ax = plt.subplots()</span><br><span class="line">    ax.hist(data1, bins = bins, color = data1_color, alpha = 1, label = data1_name)</span><br><span class="line">    ax.hist(data2, bins = bins, color = data2_color, alpha = 0.75, label = data2_name)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    ax.legend(loc = &apos;best&apos;)</span><br></pre></td></tr></table></figure>
+<h3 id="柱状图"><a href="#柱状图" class="headerlink" title="柱状图"></a><strong>柱状图</strong></h3><p>当你试图将类别很少（可能小于10）的分类数据可视化的时候，柱状图是最有效的。如果我们有太多的分类，那么这些柱状图就会非常杂乱，很难理解。柱状图对分类数据很好，因为你可以很容易地看到基于柱的类别之间的区别（比如大小)；分类也很容易划分和用颜色进行编码。我们将会看到三种不同类型的柱状图：常规的，分组的，堆叠的。在我们进行的过程中，请查看图形下面的代码。</p>
+<p>常规的柱状图如下面的图1。在 barplot() 函数中，xdata 表示 x 轴上的标记，ydata 表示 y 轴上的杆高度。误差条是一条以每条柱为中心的额外的线，可以画出标准偏差。</p>
+<p>分组的柱状图让我们可以比较多个分类变量。看看下面的图2。我们比较的第一个变量是不同组的分数是如何变化的（组是G1，G2，……等等)。我们也在比较性别本身和颜色代码。看一下代码，y_data_list 变量实际上是一个 y 元素为列表的列表，其中每个子列表代表一个不同的组。然后我们对每个组进行循环，对于每一个组，我们在 x 轴上画出每一个标记；每个组都用彩色进行编码。</p>
+<p>堆叠柱状图可以很好地观察不同变量的分类。在图3的堆叠柱状图中，我们比较了每天的服务器负载。通过颜色编码后的堆栈图，我们可以很容易地看到和理解哪些服务器每天工作最多，以及与其他服务器进行比较负载情况如何。此代码的代码与分组的条形图相同。我们循环遍历每一组，但这次我们把新柱放在旧柱上，而不是放在它们的旁边。</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/152056_qcRh_2896879.png" alt="img"></p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/152106_K9eG_2896879.png" alt="img"></p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/152114_U7g0_2896879.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">def barplot(x_data, y_data, error_data, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;):</span><br><span class="line">    _, ax = plt.subplots()</span><br><span class="line">    # Draw bars, position them in the center of the tick mark on the x-axis</span><br><span class="line">    ax.bar(x_data, y_data, color = &apos;#539caf&apos;, align = &apos;center&apos;)</span><br><span class="line">    # Draw error bars to show standard deviation, set ls to &apos;none&apos;</span><br><span class="line">    # to remove line between points</span><br><span class="line">    ax.errorbar(x_data, y_data, yerr = error_data, color = &apos;#297083&apos;, ls = &apos;none&apos;, lw = 2, capthick = 2)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_title(title)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def stackedbarplot(x_data, y_data_list, colors, y_data_names=&quot;&quot;, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;):</span><br><span class="line">    _, ax = plt.subplots()</span><br><span class="line">    # Draw bars, one category at a time</span><br><span class="line">    for i in range(0, len(y_data_list)):</span><br><span class="line">        if i == 0:</span><br><span class="line">            ax.bar(x_data, y_data_list[i], color = colors[i], align = &apos;center&apos;, label = y_data_names[i])</span><br><span class="line">        else:</span><br><span class="line">            # For each category after the first, the bottom of the</span><br><span class="line">            # bar will be the top of the last category</span><br><span class="line">            ax.bar(x_data, y_data_list[i], color = colors[i], bottom = y_data_list[i - 1], align = &apos;center&apos;, label = y_data_names[i])</span><br><span class="line">    ax.set_ylabel(y_label)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    ax.legend(loc = &apos;upper right&apos;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def groupedbarplot(x_data, y_data_list, colors, y_data_names=&quot;&quot;, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;):</span><br><span class="line">    _, ax = plt.subplots()</span><br><span class="line">    # Total width for all bars at one x location</span><br><span class="line">    total_width = 0.8</span><br><span class="line">    # Width of each individual bar</span><br><span class="line">    ind_width = total_width / len(y_data_list)</span><br><span class="line">    # This centers each cluster of bars about the x tick mark</span><br><span class="line">    alteration = np.arange(-(total_width/2), total_width/2, ind_width)</span><br><span class="line"></span><br><span class="line">    # Draw bars, one category at a time</span><br><span class="line">    for i in range(0, len(y_data_list)):</span><br><span class="line">        # Move the bar to the right on the x-axis so it doesn&apos;t</span><br><span class="line">        # overlap with previously drawn ones</span><br><span class="line">        ax.bar(x_data + alteration[i], y_data_list[i], color = colors[i], label = y_data_names[i], width = ind_width)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_title(title)</span><br><span class="line">    ax.legend(loc = &apos;upper right&apos;)</span><br></pre></td></tr></table></figure>
+<h3 id="箱形图"><a href="#箱形图" class="headerlink" title="箱形图"></a><strong>箱形图</strong></h3><p>我们之前看了直方图，它很好地可视化了变量的分布。但是如果我们需要更多的信息呢？也许我们想要更清晰的看到标准偏差？也许中值与均值有很大不同，我们有很多离群值？如果有这样的偏移和许多值都集中在一边呢？</p>
+<p>这就是箱形图所适合干的事情了。箱形图给我们提供了上面所有的信息。实线框的底部和顶部总是第一个和第三个四分位（比如 25% 和 75% 的数据），箱体中的横线总是第二个四分位（中位数）。像胡须一样的线(虚线和结尾的条线）从这个箱体伸出，显示数据的范围。</p>
+<p>由于每个组/变量的框图都是分别绘制的，所以很容易设置。xdata 是一个组/变量的列表。Matplotlib 库的 boxplot() 函数为 ydata 中的每一列或每一个向量绘制一个箱体。因此，xdata 中的每个值对应于 ydata 中的一个列/向量。我们所要设置的就是箱体的美观。</p>
+<p><img src="https://static.oschina.net/uploads/space/2018/0313/152155_nJLJ_2896879.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">def boxplot(x_data, y_data, base_color=&quot;#539caf&quot;, median_color=&quot;#297083&quot;, x_label=&quot;&quot;, y_label=&quot;&quot;, title=&quot;&quot;):</span><br><span class="line">    _, ax = plt.subplots()</span><br><span class="line"></span><br><span class="line">    # Draw boxplots, specifying desired style</span><br><span class="line">    ax.boxplot(y_data</span><br><span class="line">               # patch_artist must be True to control box fill</span><br><span class="line">               , patch_artist = True</span><br><span class="line">               # Properties of median line</span><br><span class="line">               , medianprops = &#123;&apos;color&apos;: median_color&#125;</span><br><span class="line">               # Properties of box</span><br><span class="line">               , boxprops = &#123;&apos;color&apos;: base_color, &apos;facecolor&apos;: base_color&#125;</span><br><span class="line">               # Properties of whiskers</span><br><span class="line">               , whiskerprops = &#123;&apos;color&apos;: base_color&#125;</span><br><span class="line">               # Properties of whisker caps</span><br><span class="line">               , capprops = &#123;&apos;color&apos;: base_color&#125;)</span><br><span class="line"></span><br><span class="line">    # By default, the tick label starts at 1 and increments by 1 for</span><br><span class="line">    # each box drawn. This sets the labels to the ones we want</span><br><span class="line">    ax.set_xticklabels(x_data)</span><br><span class="line">    ax.set_ylabel(y_label)</span><br><span class="line">    ax.set_xlabel(x_label)</span><br><span class="line">    ax.set_title(title)</span><br></pre></td></tr></table></figure>
+<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a><strong>结语</strong></h3><p>使用 Matplotlib 有 5 个快速简单的数据可视化方法。将相关事务抽象成函数总是会使你的代码更易于阅读和使用！我希望你喜欢这篇文章，并且学到了一些新的有用的技巧。如果你确实如此，请随时给它点赞。</p>
+<p>Cheers！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/数据可视化/" rel="tag"># 数据可视化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/CTF/Fiddler大解析！抱歉，抓包抓得好真的可以为所欲为。/" rel="next" title="Fiddler大解析！抱歉，抓包抓得好真的可以为所欲为。">
+                <i class="fa fa-chevron-left"></i> Fiddler大解析！抱歉，抓包抓得好真的可以为所欲为。
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/数据挖掘/AI速查表神经网络，机器学习，深度学习，大数据/" rel="prev" title="AI速查表神经网络，机器学习，深度学习，大数据">
+                AI速查表神经网络，机器学习，深度学习，大数据 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+	<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://EXAMPLE.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+	
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/仓鼠2.jpg" alt="xxh">
+            
+              <p class="site-author-name" itemprop="name">xxh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+		<!-- CloudCalendar -->
+<div class="widget-wrap" style="width: 90%;margin-left: auto;margin-right: auto; opacity: 0.97;">
+	<div class="widget" id="CloudCalendar"></div>
+</div>
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-种使用-Python-代码轻松实现数据可视化的方法"><span class="nav-number">1.</span> <span class="nav-text">5 种使用 Python 代码轻松实现数据可视化的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#散点图"><span class="nav-number">1.1.</span> <span class="nav-text">散点图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#折线图"><span class="nav-number">1.2.</span> <span class="nav-text">折线图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#直方图"><span class="nav-number">1.3.</span> <span class="nav-text">直方图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#柱状图"><span class="nav-number">1.4.</span> <span class="nav-text">柱状图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#箱形图"><span class="nav-number">1.5.</span> <span class="nav-text">箱形图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结语"><span class="nav-number">1.6.</span> <span class="nav-text">结语</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xxh</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a></div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://github.com/xxh422735676">默研</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://darkmoons.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://47.94.111.56:61112/Python/5个快速而简单的数据可视化方法和Python代码/';
+          this.page.identifier = 'Python/5个快速而简单的数据可视化方法和Python代码/';
+          this.page.title = '5个快速而简单的数据可视化方法和Python代码';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://darkmoons.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('2');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":125,"height":250},"mobile":{"show":true}});</script></body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/click.js"></script>
+<!-- calendar widget -->
+
+
+
